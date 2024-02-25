@@ -1,0 +1,170 @@
+{
+  "multipart": [
+    {   "when": { "AND": [
+      {"age": 0, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage0_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 1, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage1_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 2, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage2_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 3, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage3_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 4, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage4_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 5, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage5_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 6, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage6_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 7, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage7_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 8, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage8_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 9, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage9_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 10, "straintype": 0}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage10_0" }
+    },
+    {   "when": { "AND": [
+      {"age": 0, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage0_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 1, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage1_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 2, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage2_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 3, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage3_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 4, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage4_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 5, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage5_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 6, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage6_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 7, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage7_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 8, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage8_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 9, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage9_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 10, "straintype": 1}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage10_1" }
+    },
+    {   "when": { "AND": [
+      {"age": 0, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage0_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 1, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage1_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 2, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage2_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 3, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage3_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 4, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage4_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 5, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage5_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 6, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage6_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 7, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage7_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 8, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage8_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 9, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage9_2" }
+    },
+    {   "when": { "AND": [
+      {"age": 10, "straintype": 2}
+    ]},
+      "apply": { "model": "toomuchweed:block/cannabis_block_stage10_2" }
+    }
+
+  ]
+}

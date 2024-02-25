@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "toomuchweed:block/cannabis_block_stage7_0"
+  }
+}
