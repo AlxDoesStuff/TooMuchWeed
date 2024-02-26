@@ -16,6 +16,7 @@ import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.entry.RegistryEntryListCodec;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -36,6 +37,8 @@ public class CannabisBlockEntity extends BlockEntity {
     private float currentCBD  = 0;
     private int age = 0;
     private final int maxAge = 10;
+    private int maxPotentialYield = 100;
+    private int currentYield = 0;
     private boolean hasUV = false;
 
     //stupid fucking retard shit
@@ -122,6 +125,8 @@ public class CannabisBlockEntity extends BlockEntity {
         nbt.putFloat(StrainManager.NBTKeyBlockCurrentCBD,currentCBD);
         nbt.putInt(StrainManager.NBTKeyBlockAge,age);
         nbt.putBoolean(StrainManager.NBTKeyBlockHasUV,hasUV);
+        nbt.putInt(StrainManager.NBTKeyBlockYield,currentYield);
+        nbt.putInt(StrainManager.NBTKeyBlockMaxYield,maxPotentialYield);
         super.writeNbt(nbt);
     }
 
@@ -135,6 +140,8 @@ public class CannabisBlockEntity extends BlockEntity {
         currentTHC  = nbt.getFloat(StrainManager.NBTKeyBlockCurrentTHC);
         currentCBD  = nbt.getFloat(StrainManager.NBTKeyBlockCurrentCBD);
         hasUV  = nbt.getBoolean(StrainManager.NBTKeyBlockHasUV);
+        currentYield = nbt.getInt(StrainManager.NBTKeyBlockYield);
+        maxPotentialYield = nbt.getInt(StrainManager.NBTKeyBlockMaxYield);
         super.readNbt(nbt);
     }
 
@@ -189,6 +196,13 @@ public class CannabisBlockEntity extends BlockEntity {
         setAge(age+1);
         setCurrentCBD(currentCBD+cbdIncrease);
         setCurrentTHC(currentTHC+thcIncrease);
+        if (age > 7){
+            //start actually yielding
+            float yieldIncrease = ((float) maxPotentialYield / (maxAge-7)) * growthFactor;
+            float rFactor = 0.01F * (100F - (float) Random.create().nextBetween(0,15));
+            yieldIncrease = yieldIncrease * rFactor;
+            setCurrentYield(currentYield + (int) yieldIncrease);
+        }
     }
 
     public void tick (World world, BlockPos pos, BlockState state){
@@ -208,6 +222,8 @@ public class CannabisBlockEntity extends BlockEntity {
                 this.setCurrentTHC(blockEntity.getCurrentTHC());
                 this.setAge(blockEntity.getAge());
                 this.setHasUV(blockEntity.isHasUV());
+                this.setCurrentYield(blockEntity.getCurrentYield());
+                this.setMaxPotentialYield(blockEntity.getMaxPotentialYield());
             }
         }else {
             //Main tick logic (if main half)
@@ -258,6 +274,23 @@ public class CannabisBlockEntity extends BlockEntity {
     public void setStrainType(int strainType) {
         this.strainType = strainType;
         markDirty();
+    }
+
+    public void setMaxPotentialYield(int maxPotentialYield) {
+        this.maxPotentialYield = maxPotentialYield;
+        markDirty();
+    }
+
+    public void setCurrentYield(int currentYield) {
+        this.currentYield = currentYield;
+        markDirty();
+    }
+
+    public int getCurrentYield() {
+        return currentYield;
+    }
+    public int getMaxPotentialYield() {
+        return maxPotentialYield;
     }
 
     public boolean isHasUV() {

@@ -13,12 +13,16 @@ public class weedStrain {
     int maxPotentialCBD;
 
     int numeralID;
-    public weedStrain (String Name, int Type, int MaxPotentialTHC, int MaxPotentialCBD, int NumeralID){
+
+    int maxPotentialYield;
+
+    public weedStrain (String Name, int Type, int MaxPotentialTHC, int MaxPotentialCBD, int NumeralID, int MaxPotentialYield){
         name = Name;
         type = Type;
         maxPotentialTHC = MaxPotentialTHC;
         maxPotentialCBD = MaxPotentialCBD;
         numeralID = NumeralID;
+        maxPotentialYield = MaxPotentialYield;
     }
 
     public String getName() {
@@ -37,4 +41,5 @@ public class weedStrain {
         return maxPotentialTHC;
     }
     public int getNumeralID() { return numeralID; }
+    public int getMaxPotentialYield() {return maxPotentialYield;}
 }

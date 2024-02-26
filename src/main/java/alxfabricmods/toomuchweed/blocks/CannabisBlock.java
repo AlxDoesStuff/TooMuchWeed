@@ -10,6 +10,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
@@ -116,6 +117,7 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
                     blockEntity.setStrainType(strain.getType());
                     blockEntity.setMaxCBD(strain.getMaxPotentialCBD());
                     blockEntity.setMaxTHC(strain.getMaxPotentialTHC());
+                    blockEntity.setMaxPotentialYield(strain.getMaxPotentialYield());
                 }
                 world.setBlockState(pos, state.with(STRAIN_TYPE, strainType));
             }
@@ -140,6 +142,15 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(AGE);
         builder.add(STRAIN_TYPE);
+    }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        //break bottom block if top block
+        if(world.getBlockState(pos.down(1)).isOf(this)){
+            world.breakBlock(pos.down(1),false,player);
+        }
+        super.onBreak(world, pos, state, player);
     }
 
     @Nullable
@@ -198,6 +209,7 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return AGE_TO_SHAPE[age];
     }
+
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;

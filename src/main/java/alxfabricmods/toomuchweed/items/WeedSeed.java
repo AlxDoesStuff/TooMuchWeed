@@ -44,6 +44,8 @@ public class WeedSeed extends AliasedBlockItem {
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
+
+
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         //display strain if has

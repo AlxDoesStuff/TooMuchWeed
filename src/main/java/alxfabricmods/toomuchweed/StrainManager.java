@@ -18,19 +18,20 @@ public class StrainManager {
     public static final String NBTKeyBlockCurrentCBD = "plantCurrentCBD";
     public static final String NBTKeyBlockHasUV = "hasUV";
     public static final String NBTKeyBlockAge = "age";
+    public static final String NBTKeyBlockMaxYield = "maxYield";
+    public static final String NBTKeyBlockYield = "yield";
 
     //StrainMap
     private final static HashMap<String,weedStrain> StrainMap = new HashMap<String,weedStrain>();
 
     //Strains
-    public static weedStrain ERR_STRAIN  = new weedStrain("ERROR", 2, 420, 420, 0);
-    public static weedStrain SOUR_DIESEL = new weedStrain("Sour Diesel", 2, 19, 0, 1);
-    public static weedStrain ACAPULCO_GOLD = new weedStrain("Acapulco Gold", 0, 18, 1, 2);
-    public static weedStrain ICE_CREAM_CAKE = new weedStrain("Ice Cream Cake", 1, 22, 1, 3);
+    public static weedStrain ERR_STRAIN  = new weedStrain("ERROR", 2, 420, 420, 0,420);
+    public static weedStrain SOUR_DIESEL = new weedStrain("Sour Diesel", 2, 19, 0, 1,700);
+    public static weedStrain ACAPULCO_GOLD = new weedStrain("Acapulco Gold", 0, 18, 1, 2,500);
+    public static weedStrain ICE_CREAM_CAKE = new weedStrain("Ice Cream Cake", 1, 22, 1, 3,650);
 
     public StrainManager(){
-        //Assign all strains to string IDs and Numeral IDs
-        //This is so fucking retarded but its 11pm and i have no better ideas
+        //Assign all strains to string IDs
         StrainMap.put("ERR_STRAIN",ERR_STRAIN);
         StrainMap.put("SOUR_DIESEL",SOUR_DIESEL);
         StrainMap.put("ACAPULCO_GOLD",ACAPULCO_GOLD);

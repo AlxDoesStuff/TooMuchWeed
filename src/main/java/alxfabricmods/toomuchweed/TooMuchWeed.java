@@ -2,6 +2,8 @@ package alxfabricmods.toomuchweed;
 
 import alxfabricmods.toomuchweed.blockEntities.CannabisBlockEntity;
 import alxfabricmods.toomuchweed.blocks.CannabisBlock;
+import alxfabricmods.toomuchweed.items.CannabisBranch;
+import alxfabricmods.toomuchweed.items.CannabisStem;
 import alxfabricmods.toomuchweed.items.Weed1G;
 import alxfabricmods.toomuchweed.items.WeedSeed;
 import net.fabricmc.api.ModInitializer;
@@ -26,6 +28,8 @@ public class TooMuchWeed implements ModInitializer {
 	//Items
 	public static final Weed1G WEED_1_G = new Weed1G(new FabricItemSettings());
 	public static final WeedSeed WEED_SEED = new WeedSeed(CANNABIS_BLOCK, new FabricItemSettings());
+	public static final CannabisBranch CANNABIS_BRANCH = new CannabisBranch(new FabricItemSettings());
+	public static final CannabisStem CANNABIS_STEM = new CannabisStem(new FabricItemSettings());
 
 	@Override
 	public void onInitialize() {
@@ -35,6 +39,8 @@ public class TooMuchWeed implements ModInitializer {
 		//Register Items
 		Registry.register(Registries.ITEM, new Identifier("toomuchweed", "cannabis_seed"), WEED_SEED);
 		Registry.register(Registries.ITEM, new Identifier("toomuchweed", "weed_1g"), WEED_1_G);
+		Registry.register(Registries.ITEM, new Identifier("toomuchweed", "cannabis_branch"),CANNABIS_BRANCH);
+		Registry.register(Registries.ITEM, new Identifier("toomuchweed","cannabis_stem"),CANNABIS_STEM);
 		//Register Blocks
 		Registry.register(Registries.BLOCK, new Identifier("toomuchweed", "cannabis_block"),CANNABIS_BLOCK);
 		//Register Block Entities
