@@ -105,8 +105,7 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     //Inherit NBT from seed
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-        if (stack.getNbt() != null) {
-            if (stack.getNbt().getBoolean("hasNBT")) {
+            if (stack.getNbt().get(StrainManager.NBTKeyItemStrain) != null) {
                 //get the strain as weedStrain
                 weedStrain strain = StrainManager.getStrain(stack.getNbt().getString(StrainManager.NBTKeyItemStrain));
                 //infos
@@ -121,7 +120,6 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
                 }
                 world.setBlockState(pos, state.with(STRAIN_TYPE, strainType));
             }
-        }
         super.onPlaced(world, pos, state, placer, stack);
     }
 
@@ -161,9 +159,9 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         //dumb ass fucking breaking logic
             if (world.getBlockState(pos.down(1)).isOf(this)) {
-                world.breakBlock(pos.down(1), false, player); //top block is broken
+                world.breakBlock(pos.down(1), true, player); //top block is broken
             } else if (world.getBlockState(pos.up(1)).isOf(this)) {
-                world.breakBlock(pos, false, player); //Bottom block is broken
+                world.breakBlock(pos, true, player); //Bottom block is broken
             } else {
                 world.breakBlock(pos, true, player); //Single block is broken
             }
@@ -176,10 +174,7 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
         return new CannabisBlockEntity(pos, state);
     }
 
-    @Override
-    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
-        super.onStacksDropped(state, world, pos, tool, dropExperience);
-    }
+
 
     @Nullable
     @Override

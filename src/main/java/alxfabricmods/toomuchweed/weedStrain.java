@@ -15,18 +15,28 @@ public class weedStrain {
     int numeralID;
 
     int maxPotentialYield;
+    String displayName;
 
-    public weedStrain (String Name, int Type, int MaxPotentialTHC, int MaxPotentialCBD, int NumeralID, int MaxPotentialYield){
+    public weedStrain (String Name, int Type, int MaxPotentialTHC, int MaxPotentialCBD, int NumeralID, int MaxPotentialYield, String DisplayName){
         name = Name;
         type = Type;
         maxPotentialTHC = MaxPotentialTHC;
         maxPotentialCBD = MaxPotentialCBD;
         numeralID = NumeralID;
         maxPotentialYield = MaxPotentialYield;
+        displayName = DisplayName;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public int getType() {

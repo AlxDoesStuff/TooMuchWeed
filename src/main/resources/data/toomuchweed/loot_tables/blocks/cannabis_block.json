@@ -9,6 +9,17 @@
           "name": "toomuchweed:cannabis_seed",
           "functions": [
             {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantStrain",
+                  "target": "itemStrain",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
                 "min": 0,
@@ -168,6 +179,17 @@
           "name": "toomuchweed:cannabis_branch",
           "functions": [
             {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantStrain",
+                  "target": "itemStrain",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
                 "min": 0,
@@ -248,6 +270,17 @@
           "type": "minecraft:item",
           "name": "toomuchweed:cannabis_seed",
           "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantStrain",
+                  "target": "itemStrain",
+                  "op": "replace"
+                }
+              ]
+            },
             {
               "function": "minecraft:set_count",
               "count": {
@@ -337,6 +370,17 @@
           "type": "minecraft:item",
           "name": "toomuchweed:cannabis_branch",
           "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantStrain",
+                  "target": "itermStrain",
+                  "op": "replace"
+                }
+              ]
+            },
             {
               "function": "minecraft:set_count",
               "count": {

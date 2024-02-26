@@ -25,10 +25,10 @@ public class StrainManager {
     private final static HashMap<String,weedStrain> StrainMap = new HashMap<String,weedStrain>();
 
     //Strains
-    public static weedStrain ERR_STRAIN  = new weedStrain("ERROR", 2, 420, 420, 0,420);
-    public static weedStrain SOUR_DIESEL = new weedStrain("Sour Diesel", 2, 19, 0, 1,700);
-    public static weedStrain ACAPULCO_GOLD = new weedStrain("Acapulco Gold", 0, 18, 1, 2,500);
-    public static weedStrain ICE_CREAM_CAKE = new weedStrain("Ice Cream Cake", 1, 22, 1, 3,650);
+    public static weedStrain ERR_STRAIN  = new weedStrain("ERR_STRAIN", 2, 420, 420, 0,420, "ERROR");
+    public static weedStrain SOUR_DIESEL = new weedStrain("SOUR_DIESEL", 2, 19, 0, 1,700, "Sour Diesel");
+    public static weedStrain ACAPULCO_GOLD = new weedStrain("ACAPULCO_GOLD", 0, 18, 1, 2,500, "Acapulco Gold");
+    public static weedStrain ICE_CREAM_CAKE = new weedStrain("ICE_CREAM_CAKE", 1, 22, 1, 3,650, "Ice Cream Cake");
 
     public StrainManager(){
         //Assign all strains to string IDs
