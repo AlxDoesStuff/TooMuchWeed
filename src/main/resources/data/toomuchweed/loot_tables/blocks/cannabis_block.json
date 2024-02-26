@@ -2,7 +2,6 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
       "rolls": 1,
       "entries": [
         {
@@ -12,32 +11,156 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "0"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "1"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "2"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "3"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "4"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "5"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "6"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ]
+            }
           ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:any_of",
-            "terms": [
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "0"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "1"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "2"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "3"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "4"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "5"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "6"}},
-            {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "7"}}
-            ]
         }
       ]
     },
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "toomuchweed:cannabis_stem",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "0"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "1"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "2"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "3"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "4"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "5"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "6"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "rolls": 1,
       "entries": [
         {
@@ -47,123 +170,78 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 10.0
+                "min": 0,
+                "max": 10
               }
             }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:any_of",
-            "terms": [
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "0"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "1"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "2"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "3"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "4"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "5"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "6"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "7"}}
-            ]
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_stem",
-          "functions": [
+          ],
+          "conditions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:constant",
-                "value": 1.0
-              }
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "0"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "1"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "2"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "3"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "4"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "5"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "6"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ]
             }
           ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:any_of",
-            "terms": [
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "0"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "1"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "2"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "3"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "4"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "5"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "6"}},
-              {"block": "toomuchweed:cannabis_block", "condition": "minecraft:block_state_property", "properties": {"age": "7"}}
-            ]
         }
       ]
     },
     {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_stem",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:constant",
-                "value": 1.0
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "8"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_branch",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 24.0,
-                "max": 36.0
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "8"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
       "rolls": 1,
       "entries": [
         {
@@ -173,55 +251,86 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 3.0
+                "min": 2,
+                "max": 3
               }
             }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "8"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "9"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "10"
+                  }
+                }
+              ]
+            }
           ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "8"
-          }
         }
       ]
     },
     {
-      "bonus_rolls": 0.0,
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_seed",
+          "name": "toomuchweed:cannabis_stem",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 3.0
-              }
+              "count": 1
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "8"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "9"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "10"
+                  }
+                }
+              ]
             }
           ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "9"
-          }
         }
       ]
     },
     {
-      "bonus_rolls": 0.0,
       "rolls": 1,
       "entries": [
         {
@@ -231,135 +340,39 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "min": 24.0,
-                "max": 36.0
+                "min": 24,
+                "max": 36
               }
             }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "9"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_stem",
-          "functions": [
+          ],
+          "conditions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:constant",
-                "value": 1.0
-              }
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "8"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "9"
+                  }
+                },
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "toomuchweed:cannabis_block",
+                  "properties": {
+                    "age": "10"
+                  }
+                }
+              ]
             }
           ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "9"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_seed",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 3.0
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "10"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_branch",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 24.0,
-                "max": 36.0
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "10"
-          }
-        }
-      ]
-    },
-    {
-      "bonus_rolls": 0.0,
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "toomuchweed:cannabis_stem",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:constant",
-                "value": 1.0
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "block": "toomuchweed:cannabis_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "10"
-          }
         }
       ]
     }

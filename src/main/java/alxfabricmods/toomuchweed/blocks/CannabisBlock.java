@@ -145,11 +145,28 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        //break bottom block if top block
-        if(world.getBlockState(pos.down(1)).isOf(this)){
-            world.breakBlock(pos.down(1),false,player);
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        //more dumb ass fucking breaking logic
+        if (newState.isOf(Blocks.AIR)) {
+            if (world.getBlockState(pos.down(1)).isOf(this)) {
+                world.breakBlock(pos.down(1), false); //top block is broken
+            } else if (world.getBlockState(pos.up(1)).isOf(this)) {
+                world.breakBlock(pos.up(1), false); //Bottom block is broken
+            }
         }
+        super.onStateReplaced(state, world, pos, newState, moved);
+    }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        //dumb ass fucking breaking logic
+            if (world.getBlockState(pos.down(1)).isOf(this)) {
+                world.breakBlock(pos.down(1), false, player); //top block is broken
+            } else if (world.getBlockState(pos.up(1)).isOf(this)) {
+                world.breakBlock(pos, false, player); //Bottom block is broken
+            } else {
+                world.breakBlock(pos, true, player); //Single block is broken
+            }
         super.onBreak(world, pos, state, player);
     }
 
@@ -157,6 +174,11 @@ public class CannabisBlock extends BlockWithEntity implements BlockEntityProvide
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new CannabisBlockEntity(pos, state);
+    }
+
+    @Override
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
+        super.onStacksDropped(state, world, pos, tool, dropExperience);
     }
 
     @Nullable

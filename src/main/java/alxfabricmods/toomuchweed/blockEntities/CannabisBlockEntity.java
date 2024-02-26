@@ -186,7 +186,6 @@ public class CannabisBlockEntity extends BlockEntity {
                 };
             }
         }
-
         growthFactor = growthFactor * factorFactor;
         if (growthFactor > 1){
             growthFactor = 1;
