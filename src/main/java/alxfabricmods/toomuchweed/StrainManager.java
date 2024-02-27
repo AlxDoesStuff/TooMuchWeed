@@ -10,11 +10,13 @@ public class StrainManager {
     public static final String NBTKeyItemType = "itemStrainType";
     public static final String NBTKeyItemTHC = "itemTHC";
     public static final String NBTKeyItemCBD = "itemCBD";
+    public static final String NBTKeyItemYield = "branchYield";
     public static final String NBTKeyBlockStrain = "plantStrain";
     public static final String NBTKeyBlockType = "plantStrainType";
     public static final String NBTKeyBlockMaxTHC = "plantMaxTHC";
     public static final String NBTKeyBlockMaxCBD = "plantMaxCBD";
     public static final String NBTKeyBlockCurrentTHC = "plantCurrentTHC";
+    public static final String NBTKeyBlockYieldPer = "yieldPer";
     public static final String NBTKeyBlockCurrentCBD = "plantCurrentCBD";
     public static final String NBTKeyBlockHasUV = "hasUV";
     public static final String NBTKeyBlockAge = "age";

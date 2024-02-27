@@ -183,6 +183,39 @@
               "source": "block_entity",
               "ops": [
                 {
+                  "source": "yieldPer",
+                  "target": "branchYield",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "this",
+              "ops": [
+                {
+                  "source": "plantCurrentCBD",
+                  "target": "itemCBD",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "this",
+              "ops": [
+                {
+                  "source": "plantCurrentTHC",
+                  "target": "itemTHC",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
                   "source": "plantStrain",
                   "target": "itemStrain",
                   "op": "replace"
@@ -375,18 +408,48 @@
               "source": "block_entity",
               "ops": [
                 {
+                  "source": "yieldPer",
+                  "target": "branchYield",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantCurrentCBD",
+                  "target": "itemCBD",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "plantCurrentTHC",
+                  "target": "itemTHC",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
                   "source": "plantStrain",
-                  "target": "itermStrain",
+                  "target": "itemStrain",
                   "op": "replace"
                 }
               ]
             },
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 24,
-                "max": 36
-              }
+              "count": 32
             }
           ],
           "conditions": [

@@ -39,6 +39,7 @@ public class CannabisBlockEntity extends BlockEntity {
     private final int maxAge = 10;
     private int maxPotentialYield = 100;
     private int currentYield = 0;
+    private int yieldPer = 0;
     private boolean hasUV = false;
 
     //stupid fucking retard shit
@@ -127,6 +128,7 @@ public class CannabisBlockEntity extends BlockEntity {
         nbt.putBoolean(StrainManager.NBTKeyBlockHasUV,hasUV);
         nbt.putInt(StrainManager.NBTKeyBlockYield,currentYield);
         nbt.putInt(StrainManager.NBTKeyBlockMaxYield,maxPotentialYield);
+        nbt.putInt(StrainManager.NBTKeyBlockYieldPer, yieldPer);
         super.writeNbt(nbt);
     }
 
@@ -142,6 +144,7 @@ public class CannabisBlockEntity extends BlockEntity {
         hasUV  = nbt.getBoolean(StrainManager.NBTKeyBlockHasUV);
         currentYield = nbt.getInt(StrainManager.NBTKeyBlockYield);
         maxPotentialYield = nbt.getInt(StrainManager.NBTKeyBlockMaxYield);
+        yieldPer = nbt.getInt(StrainManager.NBTKeyBlockYieldPer);
         super.readNbt(nbt);
     }
 
@@ -201,6 +204,7 @@ public class CannabisBlockEntity extends BlockEntity {
             float rFactor = 0.01F * (100F - (float) Random.create().nextBetween(0,15));
             yieldIncrease = yieldIncrease * rFactor;
             setCurrentYield(currentYield + (int) yieldIncrease);
+            setYieldPer((int) ((currentYield+0.5F)/32));
         }
     }
 
@@ -243,6 +247,11 @@ public class CannabisBlockEntity extends BlockEntity {
 
     public void setCurrentTHC (float currentTHC) {
         this.currentTHC = currentTHC;
+        markDirty();
+    }
+
+    public void setYieldPer(int yieldPer) {
+        this.yieldPer = yieldPer;
         markDirty();
     }
 
